@@ -15,9 +15,3 @@ async def test_7seg(dut):
     dut.rst.value = 1
     await ClockCycles(dut.clk, 10)
     dut.rst.value = 0
-
-    dut._log.info("check all segments")
-    for i in range(10):
-        dut._log.info("check segment {}".format(i))
-        await ClockCycles(dut.clk, 100)
-        assert int(dut.segments.value) == segments[i]

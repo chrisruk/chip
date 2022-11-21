@@ -38,7 +38,4 @@ module seven_segment_seconds #( parameter MAX_COUNT = 1000 ) (
         end
     end
 
-    // instantiate segment display
-    seg7 seg7(.counter(digit), .segments(led_out));
-
 endmodule
